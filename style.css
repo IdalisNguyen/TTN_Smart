@@ -195,6 +195,7 @@ body {
     padding-top: 60px;
 }
 
+
 /* Style the form elements */
 .login-form form {
     background-color: #fefefe;
@@ -255,6 +256,10 @@ body {
 
 
 /* NAVBAR */
+.picture_login{
+	border-radius: 20px;
+}
+
 #content nav {
 	height: 56px;
 	background: var(--light);
@@ -552,6 +557,7 @@ input[type=text] {
 .pro-table tr, .pro-table th {
 	text-align: left;
 	vertical-align: top;
+	border-bottom: 1px solid;
 }
 
 tr,
@@ -619,6 +625,7 @@ table td {
     /* box-shadow: 10px 10px 20px #bbb; */
 
     margin-top: 20px;
+	display: none;
 
 }
 .boder_minishow{
@@ -685,11 +692,24 @@ table td {
 
 /* CONTENT */
 
+@media screen and (max-width: 1050px){
+	.pro-cus{
+		width: 100% !important;
+	}
+	.pro-tablee.activee {
+		width: 100% !important;
+		margin-bottom: 20px;
+		margin-right: 0px !important;
+	}
 
+}
 
-
-
-
+@media screen and (max-width: 888px){
+	.pro-tablee.activee{
+		display: none;
+	}
+	
+}
 
 
 
@@ -706,11 +726,19 @@ table td {
 	#content nav .nav-link {
 		display: none;
 	}
+	.pro-table{
+		display: none;
+	}
+	.minishow{
+		display: block;
+	}
 }
-
-
-
-
+@media screen and (max-width:550px){
+	#content nav form {
+		width: 80%;
+		margin-left: 70px;
+	}
+}
 
 
 @media screen and (max-width: 576px) {
@@ -759,13 +787,28 @@ table td {
 
 	@media screen and (max-width:400px){
 		#sidebar{
-			width: 73px;
+			width: 200px;
 		}
 	}
 		
-
+	main .dash-content .boxes .box {
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
-
+@media screen and (max-width:450px){
+	.boder_minishow{
+		margin: 2px 0px;
+		width: 100%;
+	}
+	.minishow_recomend{
+		width: 100%;
+		min-width: 270px;
+	}
+	.minishow_recomend tr{
+		width: 100%;
+	}
+}
 /* dashboard member */
 .card {
     float: left;
@@ -903,6 +946,12 @@ span.pending-span {
 
 img.table-img {
     width: 35px;
+}
+.img_infor_box{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 img.img_infor{
 	width: 150px;
